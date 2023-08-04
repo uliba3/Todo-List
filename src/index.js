@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dueDate = dueDateValue ? new Date(dueDateValue) : null; // Handle empty due date
 
     TodoManager.addTodo(content, dueDate);
+    TodoManager.saveToLocalStorage(); // Save todos to localStorage
 
     renderTodos();
     todoContentInput.value = '';
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function init() {
+    TodoManager.loadFromLocalStorage();
     renderTodos();
   }
 

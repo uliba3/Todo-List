@@ -40,17 +40,19 @@ function renderTodos() {
 
     deleteButton.addEventListener('click', () => {
       TodoManager.deleteTodo(index); // Delete todo when button is clicked
-      console.log(index);
+      TodoManager.saveToLocalStorage();
       renderTodos();
     });
 
     upButton.addEventListener('click', () => {
       TodoManager.moveUpTodo(index);
+      TodoManager.saveToLocalStorage();
       renderTodos();
     });
 
     downButton.addEventListener('click', () => {
       TodoManager.moveDownTodo(index);
+      TodoManager.saveToLocalStorage();
       renderTodos();
     })
 

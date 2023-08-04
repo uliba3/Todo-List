@@ -48,7 +48,18 @@ class TodoItem {
         this.todos[index] = this.todos[index + 1];
         this.todos[index + 1] = temp;
       }
-    }
+    },
+
+    saveToLocalStorage() {
+      localStorage.setItem('todos', JSON.stringify(this.todos));
+    },
+  
+    loadFromLocalStorage() {
+      const storedTodos = localStorage.getItem('todos');
+      if (storedTodos) {
+        this.todos = JSON.parse(storedTodos);
+      }
+    },
   
   };
   
