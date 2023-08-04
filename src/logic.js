@@ -33,6 +33,22 @@ class TodoItem {
         this.todos.splice(index, 1);
       }
     },
+
+    moveUpTodo(index) {
+      if (index > 0 && index < this.todos.length) {
+        const temp = this.todos[index];
+        this.todos[index] = this.todos[index - 1];
+        this.todos[index - 1] = temp;
+      }
+    },
+
+    moveDownTodo(index) {
+      if (index >= 0 && index < this.todos.length - 1) {
+        const temp = this.todos[index];
+        this.todos[index] = this.todos[index + 1];
+        this.todos[index + 1] = temp;
+      }
+    }
   
   };
   

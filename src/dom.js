@@ -13,6 +13,8 @@ function renderTodos() {
     const content = document.createElement('div');
     const date = document.createElement('div');
     const deleteButton = document.createElement('button'); // Create a delete button
+    const upButton = document.createElement('button');
+    const downButton = document.createElement('button');
 
     checkbox.type = 'checkbox';
     checkbox.checked = todo.completed;
@@ -33,16 +35,31 @@ function renderTodos() {
     }
 
     deleteButton.textContent = 'Delete'; // Set button text
+    upButton.textContent = '↑';
+    downButton.textContent = '↓';
+
     deleteButton.addEventListener('click', () => {
       TodoManager.deleteTodo(index); // Delete todo when button is clicked
       console.log(index);
       renderTodos();
     });
 
+    upButton.addEventListener('click', () => {
+      TodoManager.moveUpTodo(index);
+      renderTodos();
+    });
+
+    downButton.addEventListener('click', () => {
+      TodoManager.moveDownTodo(index);
+      renderTodos();
+    })
+
     todoItem.appendChild(checkbox);
     todoItem.appendChild(date);
     todoItem.appendChild(content);
     todoItem.appendChild(deleteButton); // Append the delete button
+    todoItem.appendChild(upButton);
+    todoItem.appendChild(downButton);
     todoList.appendChild(todoItem);
   });
 }
