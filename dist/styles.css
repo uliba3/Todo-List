@@ -1,0 +1,86 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container */
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Todo form styles */
+#todo-form label,
+#todo-form input,
+#todo-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#todo-form input[type="text"],
+#todo-form input[type="date"],
+#todo-form button {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Todo list styles */
+#todo-list {
+  margin-top: 20px;
+}
+
+/* Todo item styles */
+#todo-list > div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+
+#todo-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+#todo-list div > div {
+  flex: 1;
+  padding: 0 10px;
+}
+
+#todo-list button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  background-color: #777;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#todo-list button:hover {
+  background-color: #c0392b;
+}
+
+/* Styling for completed todos */
+#todo-list input[type="checkbox"]:checked ~ div {
+  text-decoration: line-through;
+  color: #777;
+}
