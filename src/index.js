@@ -21,11 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   function init() {
-    // Add some example todos
-    TodoManager.addTodo('Complete project proposal', new Date('2023-08-15'));
-    // ... (other example todos)
-
-    // Render todos
     renderTodos();
   }
 
