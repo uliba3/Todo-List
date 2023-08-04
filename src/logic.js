@@ -1,5 +1,5 @@
 class TodoItem {
-    constructor(content, dueDate, priority) {
+    constructor(content, dueDate) {
       this.content = content;
       this.dueDate = dueDate;
       this.completed = false;
@@ -21,14 +21,19 @@ class TodoItem {
   const TodoManager = {
     todos: [],
   
-    addTodo(content, dueDate, priority) {
+    addTodo(content, dueDate) {
       const todo = new TodoItem(content, dueDate);
       this.todos.push(todo);
       console.log(todo);
       return todo;
     },
+    
+    deleteTodo(index) {
+      if (index >= 0 && index < this.todos.length) {
+        this.todos.splice(index, 1);
+      }
+    },
   
-    // ... (other methods for updating todos, etc.)
   };
   
   export { TodoItem, TodoManager };

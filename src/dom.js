@@ -5,26 +5,44 @@ const todoList = document.getElementById('todo-list');
 function renderTodos() {
   // Clear existing todos
   todoList.innerHTML = '';
+
   // Render todos
-  TodoManager.todos.forEach(todo => {
+  TodoManager.todos.forEach((todo, index) => {
     const todoItem = document.createElement('div');
+    const checkbox = document.createElement('input');
     const content = document.createElement('div');
     const date = document.createElement('div');
+    const deleteButton = document.createElement('button'); // Create a delete button
+
+    checkbox.type = 'checkbox';
+    checkbox.checked = todo.completed;
+    checkbox.addEventListener('change', () => {
+      todo.toggleCompleted();
+      renderTodos();
+    });
 
     content.textContent = todo.content;
 
     if (todo.dueDate === null) {
     } else {
-        const year = todo.dueDate.getFullYear();
-        const month = String(todo.dueDate.getMonth() + 1).padStart(2, '0');
-        const day = String(todo.dueDate.getDate()).padStart(2, '0');
-        const formattedDate = `${year}/${month}/${day}`;
-        date.textContent = formattedDate;
+      const year = todo.dueDate.getFullYear();
+      const month = String(todo.dueDate.getMonth() + 1).padStart(2, '0');
+      const day = String(todo.dueDate.getDate()).padStart(2, '0');
+      const formattedDate = `${year}/${month}/${day}`;
+      date.textContent = formattedDate;
     }
-    
-    // ... (other rendering logic)
+
+    deleteButton.textContent = 'Delete'; // Set button text
+    deleteButton.addEventListener('click', () => {
+      TodoManager.deleteTodo(index); // Delete todo when button is clicked
+      console.log(index);
+      renderTodos();
+    });
+
+    todoItem.appendChild(checkbox);
     todoItem.appendChild(date);
     todoItem.appendChild(content);
+    todoItem.appendChild(deleteButton); // Append the delete button
     todoList.appendChild(todoItem);
   });
 }

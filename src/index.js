@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dueDateValue = dueDateInput.value;
     const dueDate = dueDateValue ? new Date(dueDateValue) : null; // Handle empty due date
 
-    TodoManager.addTodo(content, dueDate, 'Medium', []);
+    TodoManager.addTodo(content, dueDate);
 
     renderTodos();
     todoContentInput.value = '';
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function init() {
     // Add some example todos
-    TodoManager.addTodo('Complete project proposal', new Date('2023-08-15'), 'High', ['Research', 'Outline']);
+    TodoManager.addTodo('Complete project proposal', new Date('2023-08-15'));
     // ... (other example todos)
 
     // Render todos
