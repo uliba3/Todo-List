@@ -25,8 +25,7 @@ function renderTodos() {
 
     content.textContent = todo.content;
 
-    if (todo.dueDate === null) {
-    } else {
+    if (todo.dueDate !== null) {
       const year = todo.dueDate.getFullYear();
       const month = String(todo.dueDate.getMonth() + 1).padStart(2, '0');
       const day = String(todo.dueDate.getDate()).padStart(2, '0');
