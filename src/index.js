@@ -1,3 +1,4 @@
+// /src/index.js
 import { TodoManager } from './logic.js';
 import { renderTodos } from './dom.js';
 
