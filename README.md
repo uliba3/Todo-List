@@ -1,4 +1,3 @@
-# Todo-List
 # Todo List Web App
 
 This is a simple web application for managing your todo list. You can add, edit, delete, and reorder your todos easily. The application also supports due dates for your todos.
