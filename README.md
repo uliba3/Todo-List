@@ -41,9 +41,6 @@ To run this application locally, follow these steps:
 
 - To reorder todos, use the "↑" (move up) and "↓" (move down) buttons.
 
-## License
-
-This project is licensed under the ISC License. See the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
