@@ -2,6 +2,11 @@
 
 This is a simple web application for managing your todo list. You can add, edit, delete, and reorder your todos easily. The application also supports due dates for your todos.
 
+<div style="display: flex; justify-content: space-between;">
+  <img src="src\assets\Todos.gif" alt="Todos Gif" width="400">
+  <img src="src\assets\Todos.png" alt="Todos Screenshot" width="400">
+</div>
+
 ## Features
 
 - Add new todos with a text description and an optional due date.
@@ -29,6 +34,8 @@ To run this application locally, follow these steps:
 
 2. Open the `index.html` file in your web browser.
 
+Or, you can access the live demo [here](https://uliba3.github.io/Todo-List/dist/).
+
 ## Usage
 
 - To add a new todo, enter the todo text in the "Todo Text" input field and optionally set a due date using the "Due Date" input field. Then click the "Add Todo" button.
@@ -40,7 +47,6 @@ To run this application locally, follow these steps:
 - To delete a todo, click the "Delete" button next to the todo.
 
 - To reorder todos, use the "↑" (move up) and "↓" (move down) buttons.
-
 
 ## Acknowledgments
 
