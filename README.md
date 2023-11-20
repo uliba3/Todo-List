@@ -2,6 +2,8 @@
 
 This is a simple web application for managing your todo list. You can add, edit, delete, and reorder your todos easily. The application also supports due dates for your todos.
 
+**[Live Demo](https://uliba3.github.io/Todo-List/dist/)**
+
 <div style="display: flex; justify-content: space-between;">
   <img src="src\assets\Todos.gif" alt="Todos Gif" width="400">
   <img src="src\assets\Todos.png" alt="Todos Screenshot" width="400">
